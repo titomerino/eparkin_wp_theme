@@ -1,0 +1,24 @@
+.site-header {
+  background-color: get-palette(highlight, 1);
+  box-shadow: 0 4px 4px rgba(#000, 0.25);
+  color: get-palette(bg);
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    img {
+      display: block;
+      max-height: 50px;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}

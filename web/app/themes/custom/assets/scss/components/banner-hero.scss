@@ -1,0 +1,31 @@
+.banner-hero {
+  color: get-palette(bg);
+  padding: 2rem 0;
+
+  > .image {
+    img {
+      max-height: 350px;
+      object-fit: contain;
+    }
+  }
+
+  @include mq($until: lg) {
+    > .content {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include mq($from: lg) {
+    display: flex;
+    gap: 2rem;
+    height: calc(100vh - 3.77rem);
+    padding: 4rem 0 2rem;
+
+    > .image {
+      img {
+        max-height: 550px;
+        object-fit: contain;
+      }
+    }
+  }
+}
