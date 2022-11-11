@@ -31,6 +31,29 @@ $f = get_fields();
     </div>
   </div>
   <?php endif; ?>
+
+  <?php $channels = $f['communication_channels']; ?>
+  <?php if ($channels): ?>
+    <div class="section-wrapper">
+      <div class="container">
+        <h2 class="_mb-3 _text-center"><strong><?= $channels['title']; ?></strong></h2>
+        <div class="row">
+          <?php foreach ($channels['channels'] as $item): ?>
+          <div class="col-lg-4 col-md-6">
+            <div class="card-item">
+              <div class="icon">
+                <?= wp_get_attachment_image($item['icon']); ?>
+              </div>
+              <h3 class="h4 _text-center"><strong><?= $item['title']; ?></strong></h3>
+              <?= $item['content']; ?>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
+
 </main>
 
 <?php get_footer(); ?>
