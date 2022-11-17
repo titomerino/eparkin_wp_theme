@@ -1,0 +1,19 @@
+.svg-wave {
+  width: 100%;
+
+  svg {
+    width: 100%;
+  }
+
+  &.-white {
+    svg {
+      color: get-palette(bg);
+    }
+  }
+
+  &.-alt {
+    svg {
+      color: get-palette(bg-alt);
+    }
+  }
+}

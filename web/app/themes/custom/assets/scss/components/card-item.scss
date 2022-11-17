@@ -2,7 +2,6 @@
   background-color: get-palette(bg-alt);
   border-radius: get-size(border-radius);
   box-shadow: 0 4px 4px rgba(#000, 0.25);
-  margin-bottom: 4rem;
   margin-top: 3rem;
   padding: 6rem 2rem 2rem;
   position: relative;
@@ -29,6 +28,8 @@
   }
 
   @include mq($until: md) {
+    margin-bottom: 4rem;
+
     .icon {
       border: 10px solid get-palette(bg);
       height: 100px;

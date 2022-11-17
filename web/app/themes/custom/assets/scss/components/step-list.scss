@@ -1,0 +1,72 @@
+.step-list {
+  > .item {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+
+    > .number {
+      background-color: get-palette(highlight, 3);
+      border: 15px solid get-palette(bg);
+      border-radius: 100%;
+      flex-shrink: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      height: 80px;
+      position: relative;
+      width: 80px;
+
+      /* stylelint-disable-next-line */
+      span {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &.-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .content {
+    flex: 1 0 35%;
+  }
+
+  .image {
+    text-align: center;
+
+    img {
+      max-height: 450px;
+      object-fit: contain;
+    }
+  }
+
+  @include mq($until: md) {
+    > .item {
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+
+      > .number {
+        border: 10px solid get-palette(bg);
+      }
+
+      > .image {
+        width: 100%;
+      }
+    }
+  }
+
+  @include mq($from: md) {
+    >.item {
+      gap: 2rem;
+
+      > .number {
+        font-size: 4rem;
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+}
