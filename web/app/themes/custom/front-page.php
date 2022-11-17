@@ -56,7 +56,7 @@ $f = get_fields();
 
   <?php $step_list = $f['step_list']; ?>
   <?php if ($step_list): ?>
-  <div class="section-wrapper -alt _pt-0">
+  <div class="section-wrapper -alt _pt-0 _pb-0">
     <div class="svg-wave -white">
       <?= Utils::svg('wave-top', ''); ?>
     </div>
@@ -78,6 +78,48 @@ $f = get_fields();
       </div>
     </div>
   </div>
+  <?php endif; ?>
+
+  <?php $plan_list = $f['plan_list']; ?>
+  <?php if ($plan_list): ?>
+    <div class="section-wrapper _pt-0">
+    <div class="svg-wave -alt">
+      <?= Utils::svg('wave-top', ''); ?>
+    </div>
+      <div class="container -medium">
+        <h2 class="_mb-3 _text-center"><strong><?= $plan_list['title']; ?></strong></h2>
+
+        <div class="row">
+          <?php foreach ($plan_list['plans'] as $item): ?>
+            <div class="col-md-6 _col-flex">
+              <div class="card-item -flex">
+                <div class="icon">
+                  <?= wp_get_attachment_image($item['icon']); ?>
+                </div>
+                <h3 class="h4 _text-center"><strong><?= $item['title']; ?></strong></h3>
+                <ul class="check-list _mt-2">
+                <?php foreach ($item['features'] as $li): ?>
+                  <li><?= $li['text']; ?></li>
+                <?php endforeach; ?>
+                </ul>
+                <?php if ($item['link']): ?>
+                  <p class="_mb-0 _text-center _mt-2">
+                    <a
+                      href="<?= $item['link']['url']; ?>"
+                      class="button -alt -style-2"
+                      target="<?= $item['link']['target'] ?: '_self'; ?>"
+                    >
+                      <span><?= $item['link']['title']; ?></span>
+                    </a>
+                  </p>
+                <?php endif; ?>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+
+      </div>
+    </div>
   <?php endif; ?>
 
 </main>

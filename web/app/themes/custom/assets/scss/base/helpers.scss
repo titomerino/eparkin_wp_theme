@@ -46,6 +46,10 @@
   color: get-palette(fg-light) !important;
 }
 
+._col-flex {
+  display: flex;
+}
+
 ._text-color-inherit,
 ._text-inherit-color {
   color: inherit !important;
