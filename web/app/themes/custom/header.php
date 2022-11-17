@@ -19,12 +19,31 @@ use utils\Utils;
   <?php
     $logo = get_field('logo', 'option');
     $register_link = get_field('register_link', 'option');
+    $contacts = get_field('contacts', 'option');
   ?>
 
   <body id="top" <?php body_class(); ?>>
 
     <!-- Skip to main -->
     <a href="#main" class="skip-to-main">Skip to main content</a>
+
+    <!-- Contacts -->
+    <?php if ($contacts): ?>
+      <ul class="contact-list">
+        <?php foreach ($contacts as $item): ?>
+          <li>
+            <a
+              href="<?= $item['link']['url']; ?>"
+              target="<?= $item['link']['target'] ?: '_self'; ?>"
+            >
+              <?= wp_get_attachment_image($item['icon']); ?>
+              <span class="_visually-hidden"><?= $item['link']['title']; ?></span>
+            </a>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    <?php endif; ?>
+    <!-- Contacts end -->
 
     <!-- Main navigation -->
     <div class="site-header">

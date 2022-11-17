@@ -122,6 +122,24 @@ $f = get_fields();
     </div>
   <?php endif; ?>
 
+  <?php $register = $f['register']; ?>
+  <?php if ($register): ?>
+    <div class="section-wrapper">
+      <div class="container -narrow">
+        <?= $register['content']; ?>
+        <p class="_text-center _mt-2">
+          <a
+            href="<?= $register['link']['url']; ?>"
+            class="button -alt -style-2"
+            target="<?= $register['link']['target'] ?: '_self'; ?>"
+          >
+            <span class="_text-big"><?= $register['link']['title']; ?></span>
+          </a>
+        </p>
+      </div>
+    </div>
+  <?php endif; ?>
+
 </main>
 
 <?php get_footer(); ?>
