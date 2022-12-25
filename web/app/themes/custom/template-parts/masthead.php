@@ -8,8 +8,8 @@ $title = get_field('masthead_title') ?: wp_title('', false);
   style="background-image: url(<?= esc_url($image); ?>)"
 >
   <div class="container">
-    <h1 class="tribe-events-page-title _text-caps">
-      <?= esc_html($title); ?>
+    <h1 class="h2 tribe-events-page-title _text-caps">
+      <strong><?= esc_html($title); ?></strong>
     </h1>
   </div>
 </section>

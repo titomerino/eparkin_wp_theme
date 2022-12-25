@@ -6,7 +6,7 @@ $footer = get_field('footer', 'option')
 ?>
 
 <footer class="site-footer">
-  <div class="svg-wave -alt">
+  <div class="svg-wave <?= (is_front_page()) ? '-alt' : '-white'; ?>">
     <?= Utils::svg('wave-top', ''); ?>
   </div>
   <div class="container">
