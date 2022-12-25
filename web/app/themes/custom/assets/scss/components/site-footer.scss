@@ -1,0 +1,10 @@
+.site-footer {
+  background-color: get-palette(highlight, 2);
+  color: get-palette(bg);
+  margin: 0;
+  padding-bottom: 1rem;
+
+  .copyright {
+    margin-bottom: 0;
+  }
+}

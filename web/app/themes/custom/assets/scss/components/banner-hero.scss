@@ -21,7 +21,13 @@
     height: calc(100vh - 3.77rem);
     padding: 4rem 0 2rem;
 
+    > .content {
+      flex: 0 0 50%;
+    }
+
     > .image {
+      flex: 0 0 50%;
+
       img {
         max-height: 550px;
         object-fit: contain;

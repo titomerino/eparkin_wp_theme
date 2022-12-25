@@ -13,3 +13,16 @@
 @mixin filter-darken {
   filter: brightness(85%) saturate(125%);
 }
+
+// Base styles before Flickity kicks in to prevet reflow
+@mixin flickity-fallback {
+  &:not(.flickity-enabled) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    > * {
+      flex-shrink: 0;
+    }
+  }
+}

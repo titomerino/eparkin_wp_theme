@@ -1,0 +1,41 @@
+.client-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  > .item {
+    align-items: center;
+    display: flex;
+
+    a {
+      border: 3px solid transparent;
+      border-radius: 10px;
+      transition: all get-duration(slow);
+
+      &:hover {
+        border: 3px solid get-palette(highlight, 2);
+      }
+    }
+
+    img {
+      border-radius: 10px;
+      display: block;
+    }
+  }
+
+  @include mq($from: sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mq($from: md) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include mq($from: lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @include mq($from: xs) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

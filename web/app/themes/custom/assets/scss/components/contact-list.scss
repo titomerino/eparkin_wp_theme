@@ -1,34 +1,35 @@
 .contact-list {
-  position: fixed;
   bottom: 4rem;
-  right: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  position: fixed;
+  right: 2rem;
   z-index: 3;
 
   > li {
-    padding: 0;
     margin: 0 0 1rem;
+    padding: 0;
 
     > a {
-      height: 65px;
-      width: 65px;
-      display: block;
-      border-radius: 100%;
       background-color: get-palette(highlight, 2);
-      color: get-palette(bg);
-      position: relative;
+      border-radius: 100%;
       box-shadow: 0 4px 4px rgba(#000, 0.25);
+      color: get-palette(bg);
+      display: block;
+      height: 65px;
+      position: relative;
+      width: 65px;
 
+      /* stylelint-disable-next-line */
       img {
         height: 32px;
-        width: 32px;
+        left: 50%;
         object-fit: contain;
         position: absolute;
         top: 50%;
-        left: 50%;
         transform: translate(-50%, -50%);
+        width: 32px;
       }
     }
   }
@@ -42,6 +43,7 @@
         height: 45px;
         width: 45px;
 
+        /* stylelint-disable-next-line */
         img {
           height: 22.5px;
           width: 22.5px;

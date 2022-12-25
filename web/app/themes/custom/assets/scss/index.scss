@@ -10,7 +10,8 @@
 
 @import '~sass-mq/mq';
 @import '~node-reset-scss/scss/reset';
-
+@import '~aos/dist/aos.css';
+@import '~flickity-fade/flickity-fade.css';
 // Base
 
 @import 'base/base';

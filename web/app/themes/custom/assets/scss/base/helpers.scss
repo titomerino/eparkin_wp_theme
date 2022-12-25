@@ -59,6 +59,10 @@
   color: #fff !important;
 }
 
+._bb-white {
+  border-bottom: solid get-size(border-width) get-palette(bg);
+}
+
 // Colored text
 @each $i in map-keys(get-palette(highlight)) {
   ._text-style-#{$i} {
